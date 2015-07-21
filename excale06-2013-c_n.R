@@ -27,6 +27,7 @@ c_n <- read.fwf("Excale06_2013_Alum_CN.TXT", widths = anchos, col.names = nombre
 #Instalación de la libreria readr e inclusión al c_nacio de trabajo
 install.packages("readr")
 library(readr)
+
 c_n <- read_fwf(unz(temp, "Excale06_2013_Alum_CN.TXT"), fwf_widths(anchos, nombres))
 #Si se ha descargado la base de datos al directorio de trabajo usar
 c_n <- read_fwf("Excale06_2013_Alum_CN.TXT", widths = anchos, col.names = nombres)
@@ -58,7 +59,7 @@ c_n <- cbind(c_n01, c_n02, c_n03, c_n04, c_n05, c_n06, c_n07, c_n08, c_n09, c_n1
 rm(c_n01, c_n02, c_n03, c_n04, c_n05, c_n06, c_n07, c_n08, c_n09, c_n10, anchos, nombres)
 
 #III. Escritura
-#Escritura de archivo csv que permite una posterior lectura más sencillo de la base de datos, aunque incrementa considerablemente su tamaño de archivo.
+#Escritura de archivo csv que permite una posterior lectura más sencillo de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
 write.csv(c_n, "excale06_2013_c_n.csv")
