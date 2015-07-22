@@ -40,10 +40,13 @@ Las asignaturas evaluadas son las siguientes:
 - **ex-fce**: Formación Cívica y Ética (primaria y secundaria)
 - **ex-lyc**: Lenguaje y Comunicación (preescolar)
 - **ex-p_m**: Pensamiento Matemático (preescolar)
+- **ex-e_e**: Expresión Escrita (bachillerato)
+- **ex-f_c**: Formación Ciudadana (bachillerato)
+
 
 ### Cuestionario de contexto
 De manera concurrente a la aplicación de los EXCALE se aplican cuestionarios de contexto, los cuales indagan factores asociados con el logro educativo. Estos van dirigidos a:
-- **cuest_alu**: Alumnos
-- **cuest_doc**: Docentes
-- **cuest_dir**: Directores
-- **cuest_pad**: Padres (sólo preescolar)
+- **cuest_alu**: Alumnos (primaria, secundaria, bachillerato)
+- **cuest_doc**: Docentes (primaria, secundaria)
+- **cuest_dir**: Directores (primaria, secundaria)
+- **cuest_pad**: Padres (preescolar)
