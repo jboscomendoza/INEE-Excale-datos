@@ -1,4 +1,4 @@
-#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondientes al EXALE de Español del EXCALE 03 (Tercero de Primaria), aplicación 2010.
+#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondientes al EXCALE de Español del EXCALE 03 (Tercero de Primaria), aplicación 2010.
 
 #1. Descarga
 #Procedimiento 1: Descarga del archivo zip a una ubicación temporal, y asignación de la base de datos a la variable temp.
@@ -51,7 +51,7 @@ esp02[esp02 > 7] <- NA
 esp03[esp03 > 97] <- NA
 esp04[esp04 > 7] <- NA
 esp05[esp05 > 97] <- NA
-esp07[esp07 > 99999] <- NA
+esp07[esp07 == 99999] <- NA
 esp08[esp08 > 4] <- NA
 
 esp <- cbind(esp01, esp02, esp03, esp04, esp05, esp06, esp07, esp08, esp09)
