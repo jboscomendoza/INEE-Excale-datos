@@ -51,7 +51,7 @@ mat02[mat02 > 7] <- NA
 mat03[mat03 > 97] <- NA
 mat04[mat04 > 7] <- NA
 mat05[mat05 > 97] <- NA
-mat07[mat07 > 99999] <- NA
+mat07[mat07 == 99999] <- NA
 mat08[mat08 > 4] <- NA
 
 mat <- cbind(mat01, mat02, mat03, mat04, mat05, mat06, mat07, mat08, mat09)
