@@ -1,4 +1,4 @@
-#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondientes al EXALE de Pensamiento Matemático del EXCALE 00 (Tercero de Preescolar), aplicación 2011.
+#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondientes al EXCALE de Pensamiento Matemático del EXCALE 00 (Tercero de Preescolar), aplicación 2011.
 
 #1. Descarga
 #Procedimiento 1: Descarga del archivo zip a una ubicación temporal, y asignación de la base de datos a la variable temp.
