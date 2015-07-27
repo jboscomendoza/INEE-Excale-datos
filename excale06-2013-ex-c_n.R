@@ -1,4 +1,4 @@
-#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondientes al EXALE de Ciencias Naturales del EXCALE 06, aplicación 2013.
+#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondientes al EXCALE de Ciencias Naturales del EXCALE 06, aplicación 2013.
 
 #1. Descarga
 #Procedimiento 1: Descarga del archivo zip a una ubicación temporal, y asignación de la base de datos a la variable temp.
