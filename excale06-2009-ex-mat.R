@@ -28,6 +28,7 @@ mat <- read.fwf("Excale06_2009_Alum_MAT.TXT", widths = anchos, col.names = nombr
 install.packages("readr")
 library(readr)
 
+mat <- read_fwf(unz(temp, "Excale06_2009_Alum_MAT.TXT"), fwf_widths(anchos, nombres))
 #Si se ha descargado la base de datos al directorio de trabajo usar:
 mat <- read_fwf("Excale06_2009_Alum_MAT.TXT", fwf_widths(anchos, nombres))
 
