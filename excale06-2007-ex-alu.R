@@ -1,4 +1,4 @@
-#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondientes a los EXCALEs de Español (Comprensión lectora y Reflexión sobre la lengua) y Matemáticas, así como del Cuestionario de Contexto para Alumnos del EXCALE 06, aplicación 2007.
+#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondientes a los EXCALEs de Español (Comprensión lectora y Reflexión sobre la lengua) y Matemáticas, así como del Cuestionario de Contexto para Alumnos del EXCALE 06 (Sexto de Primaria), aplicación 2007.
 
 #1. Descarga
 #Procedimiento 1: Descarga del archivo zip a una ubicación temporal, y asignación de la base de datos a la variable temp.
