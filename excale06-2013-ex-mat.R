@@ -32,7 +32,7 @@ library(readr)
 #El agumento skip = 1 se incluye porque la primera línea con datos presenta errores que la hacen ilegible.
 mat <- read_fwf(unz(temp, "Excale06_2013_Alum_MAT.TXT"), fwf_widths(anchos, nombres), skip = 1)
 #Si se ha descargado la base de datos al directorio de trabajo usar:
-esp <- read_fwf("Excale06_2013_Alum_MAT.TXT", widths = anchos, col.names = nombres)
+mat <- read_fwf("Excale06_2013_Alum_MAT.TXT", widths = anchos, col.names = nombres)
  
 #2.3 Liberación del archivo temporal asignado a temp
 unlink(temp)
