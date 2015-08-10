@@ -19,7 +19,7 @@ nombres <- c("NACIONAL", "ESCUELA", "ID_ENT", "NOM_ENT", "ID_MOD", "MOD", "ENTES
 #Este procedimiento tiene la ventaja de que no requiere la instalación y uso de librerías adicionales a las incluidas en la instalación estándar de R. La desventaja de este método es que la lectura de la base de datos con read.fwf() es relativamente lenta, en particular en equipos de cómputo poco poderosos.
 doc <- read.fwf(unz(temp, "Excale06_2007_Docentes.txt"), widths = anchos, col.names = c(nombres))
 #Si se ha descargado la base de datos al directorio de trabajo usar:
-doc <- read.fwf("Excale06_2013_MAT_Esp.TXT", widths = anchos, col.names = c(nombres))
+doc <- read.fwf("Excale06_2007_Docentes.txt", widths = anchos, col.names = c(nombres))
 
 #Procedimiento 2. Usando la librería readr
 #Este procedimiento tiene como desventaja que requiere la instalación y uso de la librería readr, adicional a las incluidas en la instalación estándar de R. La ventaja de este método es que la lectura de la base de datos con la funcion read_fwf() de readr es relativamente rápida, incluso en equipos de cómputo poco poderosos.
