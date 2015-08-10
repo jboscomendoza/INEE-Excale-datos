@@ -74,12 +74,12 @@ rm(ayp01, ayp02, ayp03, ayp04, ayp05, ayp06, ayp07, ayp08, ayp09, ayp10, ayp11, 
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
-write.csv(ayp, "excale00_2007_p_m.csv")
+write.csv(ayp, "excale00_2007_ayp.csv")
 #Lectura a variable ayp
-ayp <- read.csv("excale00_2007_p_m.csv")
+ayp <- read.csv("excale00_2007_ayp.csv")
 
 #Procedimiento 2: Con readr
 #Escritura
-write_csv(ayp, "excale00_2007_p_m.csv")
+write_csv(ayp, "excale00_2007_ayp.csv")
 #Lectura a variable ayp
-ayp <- read_csv("excale00_2007_p_m.csv")
+ayp <- read_csv("excale00_2007_ayp.csv")
