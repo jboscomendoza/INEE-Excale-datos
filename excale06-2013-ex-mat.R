@@ -19,21 +19,21 @@ nombres <- c("NACIONAL", "ESCUELA", "ID_ENT", "NOM_ENT", "ID_MOD", "MOD", "ESTRA
 #Este procedimiento tiene la ventaja de que no requiere la instalación y uso de librerías adicionales a las incluidas en la instalación estándar de R. La desventaja de este método es que la lectura de la base de datos con read.fwf() es relativamente lenta, en particular en equipos de cómputo poco poderosos.
 #El agumento skip = 1 se incluye porque la primera línea con datos presenta errores que la hacen ilegible.
 mat <- read.fwf(unz(temp, "Excale06_2013_Alum_MAT.TXT"), widths = anchos, col.names = nombres, skip = 1)
-#Si se ha descargado la base de datos al directorio de trabajo usar
+#Si se ha descargado la base de datos al directorio de trabajo usar:
 mat <- read.fwf("Excale06_2013_MAT_Esp.TXT", widths = anchos, col.names = nombres)
 
 #Procedimiento 2. Usando la librería readr
 #Este procedimiento tiene como desventaja que requiere la instalación y uso de la librería readr, adicional a las incluidas en la instalación estándar de R. La ventaja de este método es que la lectura de la base de datos con la funcion read_fwf() de readr es relativamente rápida, incluso en equipos de cómputo poco poderosos.
 
-#Instalación de la libreria readr e inclusión al matacio de trabajo
+#Instalación de la libreria readr e inclusión al directorio de trabajo
 install.packages("readr")
 library(readr)
 
 #El agumento skip = 1 se incluye porque la primera línea con datos presenta errores que la hacen ilegible.
 mat <- read_fwf(unz(temp, "Excale06_2013_Alum_MAT.TXT"), fwf_widths(anchos, nombres), skip = 1)
-#Si se ha descargado la base de datos al directorio de trabajo usar
+#Si se ha descargado la base de datos al directorio de trabajo usar:
 esp <- read_fwf("Excale06_2013_Alum_MAT.TXT", widths = anchos, col.names = nombres)
-
+ 
 #2.3 Liberación del archivo temporal asignado a temp
 unlink(temp)
 rm(temp)
@@ -60,7 +60,7 @@ mat09[mat09 > 4] <- NA
 mat <- cbind(mat01, mat02, mat03, mat04, mat05, mat06, mat07, mat08, mat09, mat10)
 rm(mat01, mat02, mat03, mat04, mat05, mat06, mat07, mat08, mat09, mat10, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
