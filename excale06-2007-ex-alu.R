@@ -20,7 +20,7 @@ nombres_2 <- c("AP001", "AP002", "AP003", "AP004", "AP005", "AP006", "AP007", "A
 #Este procedimiento tiene la ventaja de que no requiere la instalación y uso de librerías adicionales a las incluidas en la instalación estándar de R. La desventaja de este método es que la lectura de la base de datos con read.fwf() es relativamente lenta, en particular en equipos de cómputo poco poderosos.
 alu <- read.fwf(unz(temp, "Excale06_2007_Alumnos.TXT"), widths = anchos, col.names = c(nombres_1, nombres_2))
 #Si se ha descargado la base de datos al directorio de trabajo usar:
-alu <- read.fwf("Excale06_2013_MAT_Esp.TXT", widths = anchos, col.names = c(nombres_1, nombres_2))
+alu <- read.fwf("Excale06_2007_Alumnos.TXT", widths = anchos, col.names = c(nombres_1, nombres_2))
 
 #Procedimiento 2. Usando la librería readr
 #Este procedimiento tiene como desventaja que requiere la instalación y uso de la librería readr, adicional a las incluidas en la instalación estándar de R. La ventaja de este método es que la lectura de la base de datos con la funcion read_fwf() de readr es relativamente rápida, incluso en equipos de cómputo poco poderosos.
