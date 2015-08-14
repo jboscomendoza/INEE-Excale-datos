@@ -34,7 +34,7 @@ dre <- import("Excale09_2005_Directores.sav")
 unlink(temp)
 rm(temp)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
