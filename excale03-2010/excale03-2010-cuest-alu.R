@@ -57,7 +57,7 @@ alu08[alu08 > 4] <- NA
 alu <- cbind(alu01, alu02, alu03, alu04, alu05, alu06, alu07, alu08, alu09)
 rm(alu01, alu02, alu03, alu04, alu05, alu06, alu07, alu08, alu09, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
