@@ -57,7 +57,7 @@ esp08[esp08 > 4] <- NA
 esp <- cbind(esp01, esp02, esp03, esp04, esp05, esp06, esp07, esp08, esp09)
 rm(esp01, esp02, esp03, esp04, esp05, esp06, esp07, esp08, esp09, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
