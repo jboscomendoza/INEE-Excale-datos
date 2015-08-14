@@ -1,4 +1,4 @@
-#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondientes al EXCALE de Ciencias Naturales del EXCALE 06, aplicación 2013.
+#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondientes al EXCALE de Ciencias Naturales del EXCALE 06 (Sexto de Primaria), aplicación 2013.
 
 #1. Descarga
 #Procedimiento 1: Descarga del archivo zip a una ubicación temporal, y asignación de la base de datos a la variable temp.
@@ -30,7 +30,7 @@ library(readr)
 
 c_n <- read_fwf(unz(temp, "Excale06_2013_Alum_CN.TXT"), fwf_widths(anchos, nombres))
 #Si se ha descargado la base de datos al directorio de trabajo usar
-c_n <- read_fwf("Excale06_2013_Alum_CN.TXT", widths = anchos, col.names = nombres)
+c_n <- read_fwf("Excale06_2013_Alum_CN.TXT", fwf_widths(anchos, nombres))
 
 #2.3 Liberación del archivo temporal asignado a temp
 unlink(temp)
@@ -58,7 +58,7 @@ c_n09[c_n09 > 4] <- NA
 c_n <- cbind(c_n01, c_n02, c_n03, c_n04, c_n05, c_n06, c_n07, c_n08, c_n09, c_n10)
 rm(c_n01, c_n02, c_n03, c_n04, c_n05, c_n06, c_n07, c_n08, c_n09, c_n10, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una posterior lectura más sencillo de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
