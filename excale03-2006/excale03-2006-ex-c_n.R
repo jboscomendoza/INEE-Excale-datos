@@ -64,7 +64,7 @@ c_n12[c_n12 > 4] <- NA
 c_n <- cbind(c_n01, c_n02, c_n03, c_n04, c_n05, c_n06, c_n07, c_n08, c_n09, c_n10, c_n11, c_n12, c_n13)
 rm(c_n01, c_n02, c_n03, c_n04, c_n05, c_n06, c_n07, c_n08, c_n09, c_n10, c_n11, c_n12, c_n13, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
