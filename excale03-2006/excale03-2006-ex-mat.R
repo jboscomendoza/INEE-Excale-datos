@@ -64,7 +64,7 @@ mat12[mat12 > 4] <- NA
 mat <- cbind(mat01, mat02, mat03, mat04, mat05, mat06, mat07, mat08, mat09, mat10, mat11, mat12, mat13)
 rm(mat01, mat02, mat03, mat04, mat05, mat06, mat07, mat08, mat09, mat10, mat11, mat12, mat13, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
