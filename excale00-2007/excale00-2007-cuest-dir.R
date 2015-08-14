@@ -17,9 +17,9 @@ nombres <- c("NACIONAL", "ESCUELA", "ID_ENT", "NOM_ENT", "ID_MOD", "MOD", "ENTES
 #2.2 Lectura
 #Procedimiento 1. Usando la librería base de R
 #Este procedimiento tiene la ventaja de que no requiere la instalación y uso de librerías adicionales a las incluidas en la instalación estándar de R. La desventaja de este método es que la lectura de la base de datos con read.fwf() es relativamente lenta, en particular en equipos de cómputo poco poderosos.
-dre <- read.fwf(unz(temp, "Excale00_2007_Dir_Cuest.TXT"), widths = anchos, col.names = c(nombres))
+dre <- read.fwf(unz(temp, "Excale00_2007_Dir_Cuest.TXT"), widths = anchos, col.names = nombres)
 #Si se ha descargado la base de datos al directorio de trabajo usar:
-dre <- read.fwf("Excale00_2007_Dir_Cuest.TXT", widths = anchos, col.names = c(nombres))
+dre <- read.fwf("Excale00_2007_Dir_Cuest.TXT", widths = anchos, col.names = nombres)
 
 #Procedimiento 2. Usando la librería readr
 #Este procedimiento tiene como desventaja que requiere la instalación y uso de la librería readr, adicional a las incluidas en la instalación estándar de R. La ventaja de este método es que la lectura de la base de datos con la funcion read_fwf() de readr es relativamente rápida, incluso en equipos de cómputo poco poderosos.
@@ -28,9 +28,9 @@ dre <- read.fwf("Excale00_2007_Dir_Cuest.TXT", widths = anchos, col.names = c(no
 install.packages("readr")
 library(readr)
 
-dre <- read_fwf(unz(temp, "Excale00_2007_Dir_Cuest.TXT"), fwf_widths(anchos, c(nombres)))
+dre <- read_fwf(unz(temp, "Excale00_2007_Dir_Cuest.TXT"), fwf_widths(anchos, nombres))
 #Si se ha descargado la base de datos al directorio de trabajo usar:
-dre <- read_fwf("Excale00_2007_Dir_Cuest.TXT", widths = anchos, col.names = c(nombres))
+dre <- read_fwf("Excale00_2007_Dir_Cuest.TXT", fwf_widths(anchos, nombres))
 
 #2.3 Liberación del archivo temporal asignado a temp
 unlink(temp)
