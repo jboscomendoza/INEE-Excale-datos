@@ -64,7 +64,7 @@ his12[his12 > 4] <- NA
 his <- cbind(his01, his02, his03, his04, his05, his06, his07, his08, his09, his10, his11, his12, his13)
 rm(his01, his02, his03, his04, his05, his06, his07, his08, his09, his10, his11, his12, his13, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
