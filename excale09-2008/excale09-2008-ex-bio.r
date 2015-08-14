@@ -60,7 +60,7 @@ bio10[bio10 > 4] <- NA
 bio <- cbind(bio01, bio02, bio03, bio04, bio05, bio06, bio07, bio08, bio09, bio10, bio11)
 rm(bio01, bio02, bio03, bio04, bio05, bio06, bio07, bio08, bio09, bio10, bio11, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
