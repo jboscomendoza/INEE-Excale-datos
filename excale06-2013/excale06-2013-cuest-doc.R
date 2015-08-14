@@ -1,4 +1,4 @@
-#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondiente al Cuestionario de Contexto del Docente del EXCALE 06, aplicación 2013.
+#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondiente al Cuestionario de Contexto del Docente del EXCALE 06 (Sexto de Primaria), aplicación 2013.
 
 #1. Descarga
 #Procedimiento 1: Descarga del archivo zip a una ubicación temporal, y asignación de la base de datos a la variable temp.
@@ -29,7 +29,7 @@ install.packages("readr")
 library(readr)
 doc <- read_fwf(unz(temp, "Excale06_2013_Doc_Cuest.TXT"), fwf_widths(anchos, nombres))
 #Si se ha descargado la base de datos al directorio de trabajo usar
-doc <- read_fwf("Excale06_2013_Doc_Cuest.TXT", widths = anchos, col.names = nombres)
+doc <- read_fwf("Excale06_2013_Doc_Cuest.TXT", fwf_widths(anchos, nombres))
 
 #2.3 Liberación del archivo temporal asignado a temp
 unlink(temp)
@@ -52,7 +52,7 @@ doc06[doc06 > 7] <- NA
 doc <- cbind(doc01, doc02, doc03, doc04, doc05, doc06, doc07)
 rm(doc01, doc02, doc03, doc04, doc05, doc06, doc07)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
