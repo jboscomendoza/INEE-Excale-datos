@@ -64,7 +64,7 @@ geo12[geo12 > 4] <- NA
 geo <- cbind(geo01, geo02, geo03, geo04, geo05, geo06, geo07, geo08, geo09, geo10, geo11, geo12, geo13)
 rm(geo01, geo02, geo03, geo04, geo05, geo06, geo07, geo08, geo09, geo10, geo11, geo12, geo13, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
