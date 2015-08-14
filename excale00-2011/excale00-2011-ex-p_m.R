@@ -56,7 +56,7 @@ p_m08[p_m08 > 4] <- NA
 p_m <- cbind(p_m01, p_m02, p_m03, p_m04, p_m05, p_m06, p_m07, p_m08, p_m09)
 rm(p_m01, p_m02, p_m03, p_m04, p_m05, p_m06, p_m07, p_m08, p_m09, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
