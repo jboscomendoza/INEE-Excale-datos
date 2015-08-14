@@ -51,7 +51,7 @@ f_c05[f_c05 > 7] <- NA
 f_c<- cbind(f_c01, f_c02, f_c03, f_c04, f_c05, f_c06)
 rm(f_c01, f_c02, f_c03, f_c04, f_c05, f_c06, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
