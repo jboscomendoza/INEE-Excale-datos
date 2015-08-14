@@ -1,4 +1,4 @@
-#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondientes al EXCALE de Español del EXCALE 06, aplicación 2013.
+#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondientes al EXCALE de Español del EXCALE 06 (Sexto de Primaria), aplicación 2013.
 
 #1. Descarga
 #Procedimiento 1: Descarga del archivo zip a una ubicación temporal, y asignación de la base de datos a la variable temp.
@@ -30,7 +30,7 @@ library(readr)
 
 esp <- read_fwf(unz(temp, "Excale06_2013_Alum_Esp.TXT"), fwf_widths(anchos, nombres))
 #Si se ha descargado la base de datos al directorio de trabajo usar
-esp <- read_fwf("Excale06_2013_Alum_Esp.TXT", widths = anchos, col.names = nombres)
+esp <- read_fwf("Excale06_2013_Alum_Esp.TXT", fwf_widths(anchos, nombres))
 
 #2.3 Liberación del archivo temporal asignado a temp
 unlink(temp)
@@ -58,7 +58,7 @@ esp09[esp09 > 4] <- NA
 esp <- cbind(esp01, esp02, esp03, esp04, esp05, esp06, esp07, esp08, esp09, esp10)
 rm(esp01, esp02, esp03, esp04, esp05, esp06, esp07, esp08, esp09, esp10, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
