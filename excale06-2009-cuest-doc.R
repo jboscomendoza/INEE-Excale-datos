@@ -55,7 +55,7 @@ doc07[doc07 > 7] <- NA
 doc <- cbind(doc01, doc02, doc03, doc04, doc05, doc06, doc07, doc08)
 rm(doc01, doc02, doc03, doc04, doc05, doc06, doc07, doc08, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
