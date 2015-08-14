@@ -1,4 +1,4 @@
-#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondientes al EXCALE de Matemáticas del EXCALE 06, aplicación 2013.
+#Este documento contiene código para descargar, leer, guardar y manipular en R la base de datos correspondientes al EXCALE de Matemáticas del EXCALE 06 (Sexto de Primaria), aplicación 2013.
 
 #1. Descarga
 #Procedimiento 1: Descarga del archivo zip a una ubicación temporal, y asignación de la base de datos a la variable temp.
@@ -20,7 +20,7 @@ nombres <- c("NACIONAL", "ESCUELA", "ID_ENT", "NOM_ENT", "ID_MOD", "MOD", "ESTRA
 #El agumento skip = 1 se incluye porque la primera línea con datos presenta errores que la hacen ilegible.
 mat <- read.fwf(unz(temp, "Excale06_2013_Alum_MAT.TXT"), widths = anchos, col.names = nombres, skip = 1)
 #Si se ha descargado la base de datos al directorio de trabajo usar:
-mat <- read.fwf("Excale06_2013_MAT_Esp.TXT", widths = anchos, col.names = nombres)
+mat <- read.fwf("Excale06_2013_MAT_Esp.TXT", widths = anchos, col.names = nombres, skip = 1)
 
 #Procedimiento 2. Usando la librería readr
 #Este procedimiento tiene como desventaja que requiere la instalación y uso de la librería readr, adicional a las incluidas en la instalación estándar de R. La ventaja de este método es que la lectura de la base de datos con la funcion read_fwf() de readr es relativamente rápida, incluso en equipos de cómputo poco poderosos.
@@ -32,7 +32,7 @@ library(readr)
 #El agumento skip = 1 se incluye porque la primera línea con datos presenta errores que la hacen ilegible.
 mat <- read_fwf(unz(temp, "Excale06_2013_Alum_MAT.TXT"), fwf_widths(anchos, nombres), skip = 1)
 #Si se ha descargado la base de datos al directorio de trabajo usar:
-mat <- read_fwf("Excale06_2013_Alum_MAT.TXT", widths = anchos, col.names = nombres)
+mat <- read_fwf("Excale06_2013_Alum_MAT.TXT", fwf_widths(anchos, nombres), skip = 1)
  
 #2.3 Liberación del archivo temporal asignado a temp
 unlink(temp)
