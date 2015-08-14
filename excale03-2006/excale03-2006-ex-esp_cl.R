@@ -30,7 +30,7 @@ library(readr)
 
 esp_cl <- read_fwf(unz(temp, "Excale03_2006_Alum_CLRL.TXT"), fwf_widths(anchos, nombres))
 #Si se ha descargado la base de datos al directorio de trabajo usar:
-esp_cl <- read_fwf("Excale03_2006_Alum_CLRL.TXT", widths = anchos, col.names = nombres)
+esp_cl <- read_fwf("Excale03_2006_Alum_CLRL.TXT", fwf_widths(anchos, nombres))
 
 #2.3 Liberación del archivo temporal asignado a temp
 unlink(temp)
@@ -64,7 +64,7 @@ esp_cl12[esp_cl12 > 4] <- NA
 esp_cl <- cbind(esp_cl01, esp_cl02, esp_cl03, esp_cl04, esp_cl05, esp_cl06, esp_cl07, esp_cl08, esp_cl09, esp_cl10, esp_cl11, esp_cl12, esp_cl13)
 rm(esp_cl01, esp_cl02, esp_cl03, esp_cl04, esp_cl05, esp_cl06, esp_cl07, esp_cl08, esp_cl09, esp_cl10, esp_cl11, esp_cl12, esp_cl13, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
