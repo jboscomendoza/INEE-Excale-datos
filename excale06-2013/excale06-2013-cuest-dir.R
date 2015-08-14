@@ -57,7 +57,7 @@ dre08[dre08 > 7] <- NA
 dre <- cbind(dre01, dre02, dre03, dre04, dre05, dre06, dre07, dre08, dre09)
 rm(dre01, dre02, dre03, dre04, dre05, dre06, dre07, dre08, dre09, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
