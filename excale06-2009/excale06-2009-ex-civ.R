@@ -62,7 +62,7 @@ civ11[civ11 > 4] <- NA
 civ <- cbind(civ01, civ02, civ03, civ04, civ05, civ06, civ07, civ08, civ09, civ10, civ11, civ12)
 rm(civ01, civ02, civ03, civ04, civ05, civ06, civ07, civ08, civ09, civ10, civ11, civ12, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
