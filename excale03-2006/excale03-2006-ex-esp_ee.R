@@ -68,7 +68,7 @@ esp_ee14[esp_ee14 > 5] <- NA
 esp_ee <- cbind(esp_ee01, esp_ee02, esp_ee03, esp_ee04, esp_ee05, esp_ee06, esp_ee07, esp_ee08, esp_ee09, esp_ee10, esp_ee11, esp_ee12, esp_ee13, esp_ee14, esp_ee15)
 rm(esp_ee01, esp_ee02, esp_ee03, esp_ee04, esp_ee05, esp_ee06, esp_ee07, esp_ee08, esp_ee09, esp_ee10, esp_ee11, esp_ee12, esp_ee13, esp_ee14, esp_ee15, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
