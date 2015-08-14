@@ -60,7 +60,7 @@ fce10[fce10 > 4] <- NA
 fce <- cbind(fce01, fce02, fce03, fce04, fce05, fce06, fce07, fce08, fce09, fce10, fce11)
 rm(fce01, fce02, fce03, fce04, fce05, fce06, fce07, fce08, fce09, fce10, fce11, anchos, nombres)
 
-#III. Escritura
+#3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
 #Procedimiento 1: Con librerías base
 #Escritura
