@@ -32,4 +32,4 @@ write_csv(c_n, "excale06_2013_c_n.csv")
 c_n <- read_csv("excale06_2013_c_n.csv")
 
 #9. Eliminación de las variables ancho y nombres
-rm(ancho, nombres)
+rm(anchos, nombres)
