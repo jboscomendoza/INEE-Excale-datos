@@ -28,8 +28,8 @@ esp[ , c(21:114)][esp[ , c(21:114)] > 4] <- NA
 #7. Escritura de la base de datos a un archivo csv, que permite una lectura más sencilla de la misma con la función read_csv de "readr" o read.csv de "base"
 write_csv(esp, "excale06_2013_esp.csv")
 
-#8. Lectura de la base de datos como csv y asignación a la variable c_n
+#8. Lectura de la base de datos como csv y asignación a la variable esp
 esp <- read_csv("excale06_2013_esp.csv")
 
 #9. Eliminación de las variables ancho y nombres
-rm(ancho, nombres)
+rm(anchos, nombres)
