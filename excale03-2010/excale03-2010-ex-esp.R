@@ -37,25 +37,12 @@ unlink(temp)
 rm(temp)
 
 #2.4 Recodificación de valores numéricos que indican datos perdidos a NA (opcional)
-esp01 <- subset(esp, select = c(NACIONAL:ID_INSTR))
-esp02 <- subset(esp, select = c(SEXO))
-esp03 <- subset(esp, select = c(EDAD))
-esp04 <- subset(esp, select = c(EDADC:EDADN))
-esp05 <- subset(esp, select = c(EDAD_AC:MES_NAC))
-esp06 <- subset(esp, select = c(W_ALU))
-esp07 <- subset(esp, select = c(DOCENTE))
-esp08 <- subset(esp, select = c(PEA_01:PEM_13))
-esp09 <- subset(esp, select = c(PV1ESP:W_FSTR80))
+ex03_alu[c(11, 13, 14)][ex03_alu[c(11, 13, 14)] >= 7] <- NA
+ex03_alu[c(12, 15, 16)][ex03_alu[c(12, 15, 16)] >= 97] <- NA
+ex03_alu[18][ex03_alu[18] == 99999] <- NA
+ex03_alu[c(19:72)][ex03_alu[c(19:72)] >= 4] <- NA
 
-esp02[esp02 > 7] <- NA
-esp03[esp03 > 97] <- NA
-esp04[esp04 > 7] <- NA
-esp05[esp05 > 97] <- NA
-esp07[esp07 == 99999] <- NA
-esp08[esp08 > 4] <- NA
-
-esp <- cbind(esp01, esp02, esp03, esp04, esp05, esp06, esp07, esp08, esp09)
-rm(esp01, esp02, esp03, esp04, esp05, esp06, esp07, esp08, esp09, anchos, nombres)
+rm(anchos, nombres)
 
 #3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
