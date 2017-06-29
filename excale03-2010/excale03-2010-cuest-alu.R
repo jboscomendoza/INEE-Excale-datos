@@ -37,25 +37,12 @@ unlink(temp)
 rm(temp)
 
 #2.4 Recodificación de valores numéricos que indican datos perdidos a NA (opcional)
-alu01 <- subset(alu, select = c(NACIONAL:ID_INSTR))
-alu02 <- subset(alu, select = c(SEXO))
-alu03 <- subset(alu, select = c(EDAD))
-alu04 <- subset(alu, select = c(EDADC:EDADN))
-alu05 <- subset(alu, select = c(EDAD_AC:MES_NAC))
-alu06 <- subset(alu, select = c(W_ALU))
-alu07 <- subset(alu, select = c(DOCENTE))
-alu08 <- subset(alu, select = c(AP001:AP054))
-alu09 <- subset(alu, select = c(WVARSTRR:W_FSTR100))
+alu[c(11, 13, 14)][alu[c(11, 13, 14)] >= 7] <- NA
+alu[c(12, 15, 16)][alu[c(12, 15, 16)] >= 97] <- NA
+alu[18][alu[18] == 99999] <- NA
+alu[c(19:72)][alu[c(19:72)] >= 4] <- NA
 
-alu02[alu02 > 7] <- NA
-alu03[alu03 > 97] <- NA
-alu04[alu04 > 7] <- NA
-alu05[alu05 > 97] <- NA
-alu07[alu07 == 99999] <- NA
-alu08[alu08 > 4] <- NA
-
-alu <- cbind(alu01, alu02, alu03, alu04, alu05, alu06, alu07, alu08, alu09)
-rm(alu01, alu02, alu03, alu04, alu05, alu06, alu07, alu08, alu09, anchos, nombres)
+rm(anchos, nombres)
 
 #3. Escritura
 #Escritura de archivo csv que permite una lectura más sencilla de la base de datos.
