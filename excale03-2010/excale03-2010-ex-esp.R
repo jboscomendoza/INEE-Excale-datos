@@ -37,10 +37,10 @@ unlink(temp)
 rm(temp)
 
 #2.4 Recodificación de valores numéricos que indican datos perdidos a NA (opcional)
-ex03_alu[c(11, 13, 14)][ex03_alu[c(11, 13, 14)] >= 7] <- NA
-ex03_alu[c(12, 15, 16)][ex03_alu[c(12, 15, 16)] >= 97] <- NA
-ex03_alu[18][ex03_alu[18] == 99999] <- NA
-ex03_alu[c(19:72)][ex03_alu[c(19:72)] >= 4] <- NA
+esp[c(11, 13, 14)][esp[c(11, 13, 14)] >= 7] <- NA
+esp[c(12, 15, 16)][esp[c(12, 15, 16)] >= 97] <- NA
+esp[18][esp[18] == 99999] <- NA
+esp[c(19:187)][esp[c(19:187)] >= 4]
 
 rm(anchos, nombres)
 
